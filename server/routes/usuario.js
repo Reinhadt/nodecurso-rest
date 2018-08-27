@@ -4,12 +4,18 @@ const _ = require('underscore')
 const app = express()
 
 const Usuario = require('../models/usuario')
+<<<<<<< HEAD
 const {verificaToken, verificaAdminRole} = require('../middlewares/autenticacion')
 
 app.get('/usuario', verificaToken, (req, res) => {
     
     
 
+=======
+
+app.get('/usuario', (req, res) => {
+    
+>>>>>>> d524d07f2d03b9850cfcfadf89f787e3c4710cf6
     //paginación: desde dónde empezamos el query
     let desde = req.query.desde || 0
     desde = Number(desde)
@@ -44,7 +50,11 @@ app.get('/usuario', verificaToken, (req, res) => {
             })
 })
 
+<<<<<<< HEAD
 app.post('/usuario', [verificaToken, verificaAdminRole], (req, res) => {
+=======
+app.post('/usuario', (req, res) => {
+>>>>>>> d524d07f2d03b9850cfcfadf89f787e3c4710cf6
 
     //req.body obtiene el body de x-www-form-urlencoded
     //o sea, data de formularios
@@ -78,7 +88,11 @@ app.post('/usuario', [verificaToken, verificaAdminRole], (req, res) => {
 
 })
 
+<<<<<<< HEAD
 app.put('/usuario/:id', [verificaToken, verificaAdminRole], (req, res) => {
+=======
+app.put('/usuario/:id', (req, res) => {
+>>>>>>> d524d07f2d03b9850cfcfadf89f787e3c4710cf6
     let id = req.params.id
 
     //usamos underscore con su función pick
@@ -104,7 +118,11 @@ app.put('/usuario/:id', [verificaToken, verificaAdminRole], (req, res) => {
     })
 })
 
+<<<<<<< HEAD
 app.delete('/usuario/:id', [verificaToken, verificaAdminRole], (req, res) => {
+=======
+app.delete('/usuario/:id', (req, res) => {
+>>>>>>> d524d07f2d03b9850cfcfadf89f787e3c4710cf6
     
     //Para "borrar" un usuario, lo que haremos será cambiar su estado de true a false
     //esto porque en apps modernas no se borra el registro, más bien se conserva y se
