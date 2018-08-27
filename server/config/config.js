@@ -10,7 +10,6 @@ process.env.PORT = process.env.PORT || 5000
 process.env.NODE_ENV = process.env.NODE_ENV || 'dev';
 
 //=====================
-<<<<<<< HEAD
 //VENCIMIENTO DEL TOKEN
 //=====================
 process.env.CADUCIDAD_TOKEN = 60*60*24*30
@@ -25,8 +24,6 @@ process.env.SEED = process.env.SEED || 'mi-seed-de-desarrollo'
 
 
 //=====================
-=======
->>>>>>> d524d07f2d03b9850cfcfadf89f787e3c4710cf6
 //BASES DE DATOS
 //=====================
 if(process.env.NODE_ENV === 'dev'){
