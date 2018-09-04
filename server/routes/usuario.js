@@ -33,11 +33,19 @@ app.get('/usuario', verificaToken, (req, res) => {
 
                 //contamos por usuarios activos
                 Usuario.count({"estado":true}, (err, conteo) =>{
-                    res.json({
-                        total:  conteo,
-                        ok: true,
-                        usuarios
-                    })
+                    if(err){
+                        return res.status(400).json({
+                            ok: false,
+                            err
+                        })
+                    }else{
+                        res.json({
+                            total:  conteo,
+                            ok: true,
+                            usuarios
+                        })
+                    }
+                    
                 })
 
 
