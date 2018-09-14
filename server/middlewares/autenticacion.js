@@ -22,7 +22,7 @@ let verificaToken = (req, res, next) => {
     })
 }
 //=======================
-//VERIFICAR TOKEN
+//VERIFICAR SI ES ADMIN
 //=======================
 let verificaAdminRole = (req, res, next) => {
     let usuario = req.usuario;
